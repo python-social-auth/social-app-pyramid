@@ -7,6 +7,7 @@ from social_sqlalchemy.storage import SQLAlchemyUserMixin, \
                                       SQLAlchemyAssociationMixin, \
                                       SQLAlchemyNonceMixin, \
                                       SQLAlchemyCodeMixin, \
+                                      SQLAlchemyPartialMixin, \
                                       BaseSQLAlchemyStorage
 
 
@@ -14,6 +15,8 @@ class PyramidStorage(BaseSQLAlchemyStorage):
     user = None
     nonce = None
     association = None
+    code = None
+    partial = None
 
 
 def init_social(config, Base, session):
@@ -55,6 +58,11 @@ def init_social(config, Base, session):
         pass
 
     class Code(_AppSession, Base, SQLAlchemyCodeMixin):
+        """Mail validation single one time use code"""
+        pass
+
+    class Partial(_AppSession, Base, SQLAlchemyPartialMixin):
+        """Partial pipeline storage"""
         pass
 
     # Set the references in the storage class
@@ -62,3 +70,4 @@ def init_social(config, Base, session):
     PyramidStorage.nonce = Nonce
     PyramidStorage.association = Association
     PyramidStorage.code = Code
+    PyramidStorage.partial = Partial
