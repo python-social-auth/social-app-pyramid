@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/python-social-auth/social-app-pyramid/commits/master)
 
+## [1.0.0](https://github.com/python-social-auth/social-app-pyramid/releases/tag/1.0.0) - 2017-01-22
+
 ### Added
 - Added partial pipeline db storage solution
 
