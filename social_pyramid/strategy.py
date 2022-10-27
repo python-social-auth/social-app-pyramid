@@ -51,6 +51,10 @@ class PyramidStrategy(BaseStrategy):
                 data = self.request.POST
         else:
             data = self.request.GET
+
+        # Convert MultiDict to dictionary
+        data = data.mixed()
+
         return data
 
     def request_host(self):
