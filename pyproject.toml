@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = 'social-auth-app-pyramid'
+dynamic = ["version"]
+dependencies = [
+    "six",
+    "social-auth-core>=1.0.0",
+    "social-auth-storage-sqlalchemy>=1.0.0",
+]
+authors = [
+  {name = "Matias Aguirre", email = "matiasaguirre@gmail.com"},
+  {name = "Lee Ji-ho", email = "search5@gmail.com"},
+]
+description = 'Python Social Authentication, Pyramid integration.'
+license = {text = 'BSD'}
+keywords = ["pyramid", "sqlalchemy", "social auth"]
+readme = "README.md"
+classifiers=[
+    'Development Status :: 4 - Beta',
+    'Topic :: Internet',
+    'License :: OSI Approved :: BSD License',
+    'Intended Audience :: Developers',
+    'Environment :: Web Environment',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12'
+]
+requires-python = ">= 3.7"
+
+[project.urls]
+Repository = 'https://github.com/python-social-auth/social-app-pyramid'
+Documentation = 'http://python-social-auth.readthedocs.org'
+Issues = 'https://github.com/python-social-auth/social-app-pyramid/issues'
+Changelog = 'https://github.com/python-social-auth/social-app-pyramid/blob/master/CHANGELOG.md
+
+[options]
+zip_safe = false
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages]
+find = {}
+
+[tool.setuptools.dynamic]
+version = {attr = "social_pyramid.__version__"}
