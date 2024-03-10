@@ -1,11 +1,9 @@
-from webob.multidict import NoVars
-
-from pyramid.response import Response
 from pyramid.httpexceptions import HTTPFound
 from pyramid.renderers import render
-
-from social_core.utils import build_absolute_uri
+from pyramid.response import Response
 from social_core.strategy import BaseStrategy, BaseTemplateStrategy
+from social_core.utils import build_absolute_uri
+from webob.multidict import NoVars
 
 
 class PyramidTemplateStrategy(BaseTemplateStrategy):
@@ -21,11 +19,11 @@ class PyramidStrategy(BaseStrategy):
 
     def __init__(self, storage, request, tpl=None):
         self.request = request
-        super(PyramidStrategy, self).__init__(storage, tpl)
+        super().__init__(storage, tpl)
 
     def redirect(self, url):
         """Return a response redirect to the given URL"""
-        response = getattr(self.request, 'response', None)
+        response = getattr(self.request, "response", None)
         if response is None:
             response = HTTPFound(location=url)
         else:
@@ -42,7 +40,7 @@ class PyramidStrategy(BaseStrategy):
 
     def request_data(self, merge=True):
         """Return current request data (POST or GET)"""
-        if self.request.method == 'POST':
+        if self.request.method == "POST":
             if merge:
                 data = self.request.POST.copy()
                 if not isinstance(self.request.GET, NoVars):
