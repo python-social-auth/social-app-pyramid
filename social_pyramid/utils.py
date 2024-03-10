@@ -52,7 +52,8 @@ def login_required(func):
     @wraps(func)
     def wrapper(request, *args, **kwargs):
         is_logged_in = module_member(  # fmt: skip
-            request.backend.setting("LOGGEDIN_FUNCTION"))
+            request.backend.setting("LOGGEDIN_FUNCTION")
+        )
         if not is_logged_in(request):
             raise HTTPForbidden("Not authorized user")
         return func(request, *args, **kwargs)
