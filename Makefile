@@ -1,12 +1,8 @@
 build:
-	@ python setup.py sdist
-	@ python setup.py bdist_wheel --python-tag py2
-	@ BUILD_VERSION=3 python setup.py bdist_wheel --python-tag py3
+	@ python -m build
 
 publish:
-	@ python setup.py sdist upload
-	@ python setup.py bdist_wheel --python-tag py2 upload
-	@ BUILD_VERSION=3 python setup.py bdist_wheel --python-tag py3 upload
+	@ twine upload dist/*
 
 clean:
 	@ find . -name '*.py[co]' -delete
