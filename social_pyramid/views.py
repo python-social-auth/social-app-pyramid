@@ -26,8 +26,9 @@ def complete(request, *args, **kwargs):
 
 
 @view_config(route_name="social.disconnect", request_method=("POST",))
-@view_config(
-    route_name="social.disconnect_association", request_method=("POST",)  # fmt: skip
+@view_config(  # fmt: skip
+    route_name="social.disconnect_association",  # fmt: skip
+    request_method=("POST",)  # fmt: skip
 )
 @psa()
 @login_required
