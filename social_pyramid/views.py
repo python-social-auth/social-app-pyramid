@@ -16,12 +16,14 @@ def auth(request):
 def complete(request, *args, **kwargs):
     do_login = module_member(request.backend.setting("LOGIN_FUNCTION"))
     return do_complete(
-        request.backend, do_login, request.user, redirect_name="next", *args, **kwargs
+        request.backend, do_login, request.user,  # fmt: skip
+        redirect_name="next", *args, **kwargs
     )
 
 
 @view_config(route_name="social.disconnect", request_method=("POST",))
-@view_config(route_name="social.disconnect_association", request_method=("POST",))
+@view_config(route_name="social.disconnect_association",  # fmt: skip
+             request_method=("POST",))
 @psa()
 @login_required
 def disconnect(request):

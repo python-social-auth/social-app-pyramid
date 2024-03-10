@@ -53,6 +53,6 @@ find = {}
 version = {attr = "social_pyramid.__version__"}
 
 [tool.flake8]
-max-line-length = 79
+max-line-length = 80
 # Ignore some well known paths
 exclude = ['.venv','.tox','dist','doc','build','*.egg','db/env.py','db/versions/*.py','site','Pipfile','Pipfile.lock']
