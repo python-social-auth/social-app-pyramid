@@ -1,5 +1,6 @@
 __version__ = '1.0.0'
 
+
 def includeme(config):
     from social_core.utils import setting_name
 

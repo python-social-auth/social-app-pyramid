@@ -38,7 +38,7 @@ requires-python = ">= 3.7"
 Repository = 'https://github.com/python-social-auth/social-app-pyramid'
 Documentation = 'http://python-social-auth.readthedocs.org'
 Issues = 'https://github.com/python-social-auth/social-app-pyramid/issues'
-Changelog = 'https://github.com/python-social-auth/social-app-pyramid/blob/master/CHANGELOG.md
+Changelog = 'https://github.com/python-social-auth/social-app-pyramid/blob/master/CHANGELOG.md'
 
 [options]
 zip_safe = false
@@ -51,3 +51,8 @@ find = {}
 
 [tool.setuptools.dynamic]
 version = {attr = "social_pyramid.__version__"}
+
+[tool.flake8]
+max-line-length = 79
+# Ignore some well known paths
+exclude = ['.venv','.tox','dist','doc','build','*.egg','db/env.py','db/versions/*.py','site','Pipfile','Pipfile.lock']

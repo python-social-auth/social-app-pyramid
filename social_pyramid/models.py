@@ -38,8 +38,8 @@ def init_social(config, Base, session):
         uid: Mapped[str] = mapped_column(String(UID_LENGTH))
         user_id: Mapped[int] = mapped_column(ForeignKey(User.id),
                                              nullable=False, index=True)
-        user: Mapped["User"] = relationship(User, backref=backref('social_auth',
-                                                                  lazy='dynamic'))
+        user: Mapped["User"] = relationship(  # fmt: skip
+            User, backref=backref('social_auth', lazy='dynamic'))
 
         @classmethod
         def username_max_length(cls):
