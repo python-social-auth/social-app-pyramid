@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/python-social-auth/social-app-pyramid/commits/master)
 
+### Changed
+- Modified model and access code to work with SQLAlchemy version 2 (Issue #4)
+- Updated packaging information files per PEP 517, PEP 518 (Issue #5)
+- Restricted Python minimum working version to 3.7 or higher to align with SQLAlchemy 2 (Issue #4)
+- .pre-commit-config.yaml add
+
 ## [1.0.0](https://github.com/python-social-auth/social-app-pyramid/releases/tag/1.0.0) - 2017-01-22
 
 ### Added
