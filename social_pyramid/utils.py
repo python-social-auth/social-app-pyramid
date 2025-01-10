@@ -14,7 +14,7 @@ DEFAULTS = {
 
 def get_helper(name):
     settings = get_current_registry().settings
-    return settings.get(setting_name(name), DEFAULTS.get(name, None))
+    return settings.get(setting_name(name), DEFAULTS.get(name))
 
 
 def load_strategy(request):
@@ -62,8 +62,10 @@ def login_required(func):
 
 
 def backends(request, user):
-    """Load Social Auth current user data to context under the key 'backends'.
-    Will return the output of social_core.backends.utils.user_backends_data."""
+    """
+    Load Social Auth current user data to context under the key 'backends'.
+    Will return the output of social_core.backends.utils.user_backends_data.
+    """
     storage = module_member(get_helper("STORAGE"))
     return {
         "backends": user_backends_data(
