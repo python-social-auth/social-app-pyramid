@@ -53,3 +53,4 @@ version = {attr = "social_pyramid.__version__"}
 
 [tool.setuptools.packages]
 find = {}
+license-files = []
