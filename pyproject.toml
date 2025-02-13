@@ -47,10 +47,10 @@ max-line-length = 80
 
 [tool.setuptools]
 include-package-data = true
+license-files = []
 
 [tool.setuptools.dynamic]
 version = {attr = "social_pyramid.__version__"}
 
 [tool.setuptools.packages]
 find = {}
-license-files = []
