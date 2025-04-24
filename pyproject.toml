@@ -55,7 +55,6 @@ version = {attr = "social_pyramid.__version__"}
 [tool.setuptools.packages]
 find = {}
 
-
 [tool.tomlsort]
 ignore_case = true
 sort_inline_arrays = true
