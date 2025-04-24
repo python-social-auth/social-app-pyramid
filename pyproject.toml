@@ -4,22 +4,22 @@ requires = ["setuptools"]
 
 [project]
 authors = [
-  {name = "Matias Aguirre", email = "matiasaguirre@gmail.com"},
-  {name = "Lee Ji-ho", email = "search5@gmail.com"}
+  {email = "matiasaguirre@gmail.com", name = "Matias Aguirre"},
+  {email = "search5@gmail.com", name = "Lee Ji-ho"}
 ]
 classifiers = [
   'Development Status :: 4 - Beta',
-  'Topic :: Internet',
-  'License :: OSI Approved :: BSD License',
-  'Intended Audience :: Developers',
   'Environment :: Web Environment',
-  'Programming Language :: Python',
+  'Intended Audience :: Developers',
+  'License :: OSI Approved :: BSD License',
+  'Programming Language :: Python :: 3.10',
+  'Programming Language :: Python :: 3.11',
+  'Programming Language :: Python :: 3.12',
   'Programming Language :: Python :: 3.7',
   'Programming Language :: Python :: 3.8',
   'Programming Language :: Python :: 3.9',
-  'Programming Language :: Python :: 3.10',
-  'Programming Language :: Python :: 3.11',
-  'Programming Language :: Python :: 3.12'
+  'Programming Language :: Python',
+  'Topic :: Internet'
 ]
 dependencies = [
   "six",
@@ -28,7 +28,7 @@ dependencies = [
 ]
 description = 'Python Social Authentication, Pyramid integration.'
 dynamic = ["version"]
-keywords = ["pyramid", "sqlalchemy", "social auth"]
+keywords = ["pyramid", "social auth", "sqlalchemy"]
 license = {text = 'BSD'}
 name = 'social-auth-app-pyramid'
 readme = "README.md"
@@ -42,7 +42,7 @@ Repository = 'https://github.com/python-social-auth/social-app-pyramid'
 
 [tool.flake8]
 # Ignore some well known paths
-exclude = ['.venv', '.tox', 'dist', 'doc', 'build', '*.egg', 'db/env.py', 'db/versions/*.py', 'site', 'Pipfile', 'Pipfile.lock']
+exclude = ['*.egg', '.tox', '.venv', 'build', 'db/env.py', 'db/versions/*.py', 'dist', 'doc', 'Pipfile', 'Pipfile.lock', 'site']
 max-line-length = 80
 
 [tool.setuptools]
