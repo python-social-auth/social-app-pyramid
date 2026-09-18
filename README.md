@@ -18,7 +18,7 @@ Project documentation is available at <https://python-social-auth.readthedocs.io
 ## Setup
 
 ```shell
-$ pip install social-auth-app-pyramid
+pip install social-auth-app-pyramid
 ```
 
 ## Contributing
