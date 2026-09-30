@@ -16,14 +16,13 @@ classifiers = [
   'Programming Language :: Python :: 3.10',
   'Programming Language :: Python :: 3.11',
   'Programming Language :: Python :: 3.12',
-  'Programming Language :: Python :: 3.7',
-  'Programming Language :: Python :: 3.8',
-  'Programming Language :: Python :: 3.9',
+  'Programming Language :: Python :: 3.13',
+  'Programming Language :: Python :: 3.14',
   'Topic :: Internet'
 ]
 dependencies = [
   "six",
-  "social-auth-core>=1.0.0",
+  "social-auth-core>=5.2.0",
   "social-auth-storage-sqlalchemy>=1.0.0"
 ]
 description = 'Python Social Authentication, Pyramid integration.'
@@ -32,7 +31,7 @@ keywords = ["pyramid", "social auth", "sqlalchemy"]
 license = { text = 'BSD' }
 name = 'social-auth-app-pyramid'
 readme = "README.md"
-requires-python = ">= 3.7"
+requires-python = ">= 3.10"
 
 [project.urls]
 Changelog = 'https://github.com/python-social-auth/social-app-pyramid/blob/master/CHANGELOG.md'
