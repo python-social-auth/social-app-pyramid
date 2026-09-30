@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## Unreleased
+
+### Changed
+
+- Pass the current Pyramid user to the social-core authentication initiation
+  hook.
+- Require social-auth-core 5.2 or newer and Python 3.10 or newer.
+
 ## [2.0.0](https://github.com/python-social-auth/social-app-pyramid/releases/tag/2.0.0) - 2025-02-13
 
 ### Changed

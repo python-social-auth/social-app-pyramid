@@ -8,7 +8,7 @@ from .utils import login_required, psa
 @view_config(route_name="social.auth", request_method=("GET", "POST"))
 @psa("social.complete")
 def auth(request):
-    return do_auth(request.backend, redirect_name="next")
+    return do_auth(request.backend, redirect_name="next", user=request.user)
 
 
 @view_config(route_name="social.complete", request_method=("GET", "POST"))
