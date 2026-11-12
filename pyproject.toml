@@ -22,7 +22,7 @@ classifiers = [
 ]
 dependencies = [
   "six",
-  "social-auth-core>=5.2.0",
+  "social-auth-core>=7.2.0",
   "social-auth-storage-sqlalchemy>=1.0.0"
 ]
 description = 'Python Social Authentication, Pyramid integration.'
